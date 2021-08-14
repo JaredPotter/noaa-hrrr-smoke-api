@@ -47,7 +47,10 @@ class ForecastController extends Controller
     {
         //Validate required fields
         $validated = $request->validate([
-            'data.name' => 'required',
+            'data.timestamp' => 'required',
+            'data.near_surface_smoke_video_url' => 'required',
+            'data.vertically_integrated_smoke_video_url' => 'required',
+            'data.surface_visibility_video_url' => 'required',
         ]);
 
         //Create new model and save
