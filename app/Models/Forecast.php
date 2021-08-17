@@ -11,9 +11,12 @@ class Forecast extends Model
 
     protected $fillable = [
         'timestamp',
-        'near_surface_smoke_video_url',
-        'vertically_integrated_smoke_video_url',
-        'surface_visibility_video_url',
+        'near_surface_smoke_video_url_h264',
+        'near_surface_smoke_video_url_h265',
+        'near_surface_smoke_video_url_vp9',
+        'vertically_integrated_smoke_video_url_h264',
+        'vertically_integrated_smoke_video_url_h265',
+        'vertically_integrated_smoke_video_url_vp9',
     ];
 
     protected $dates = [

@@ -10,6 +10,7 @@ class ForecastResource extends JsonResource
     {
         $return = parent::toArray($request);
         $return['type'] = 'forecast';
+
         return $return;
     }
 }

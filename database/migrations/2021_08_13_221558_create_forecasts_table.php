@@ -17,9 +17,12 @@ class CreateForecastsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->timestamp('timestamp');
-            $table->text('near_surface_smoke_video_url')->nullable();
-            $table->text('vertically_integrated_smoke_video_url')->nullable();
-            $table->text('surface_visibility_video_url')->nullable();
+            $table->text('near_surface_smoke_video_url_h264')->nullable();
+            $table->text('near_surface_smoke_video_url_h265')->nullable();
+            $table->text('near_surface_smoke_video_url_vp9')->nullable();
+            $table->text('vertically_integrated_smoke_video_url_h264')->nullable();
+            $table->text('vertically_integrated_smoke_video_url_h265')->nullable();
+            $table->text('vertically_integrated_smoke_video_url_vp9')->nullable();
         });
     }
 
