@@ -20,6 +20,14 @@ class ForecastController extends Controller
     {
         $query = UhinApi::getQueryBuilder(Forecast::class);
         $query = UhinApi::parseAll($query, $request);
+
+        $input = $request->input();
+        $area = $input['area'];
+
+        if ($area) {
+            $query->where('areaCode', '=', $area);
+        }
+
         return ForecastResource::collection($query->get());
     }
 
