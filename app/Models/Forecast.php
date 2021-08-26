@@ -11,6 +11,7 @@ class Forecast extends Model
 
     protected $fillable = [
         'timestamp',
+        'areaCode',
         'near_surface_smoke_video_url_h264',
         'near_surface_smoke_video_url_h265',
         'near_surface_smoke_video_url_vp9',
