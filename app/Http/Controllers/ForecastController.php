@@ -28,7 +28,7 @@ class ForecastController extends Controller
             $query->where('areaCode', '=', $area);
         }
 
-        return ForecastResource::collection($query->get());
+        return ForecastResource::collection($query->latest()->get());
     }
 
     /**
